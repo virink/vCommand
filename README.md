@@ -4,42 +4,42 @@ A command tools for me
 
 ## Functions
 
--      b16e       - Base14 Encode
--      b16d       - Base16 Decode
--      b32e       - Base32 Encode
--      b32d       - Base32 Decode
--      b64e       - Base64 Encode
--      b64d       - Base64 Decode
--     atbash      - 埃特巴什码解码
--     caesar      - 凯撒编码
--      rot13      - rot13
--      mpkc       - 手机键盘编码 Mobile Phone Keyboard Cipher
--      morse      - 摩斯电码
--     peigen      - 培根密码
--    vigenere     - 维吉利亚密码
--      urld       - URL 解码
--    urldecode    - URL 解码
--      urle       - URL 编码
--    urlencode    - URL 编码
--      urldp      - URL 解码 Plus
-- urldecode_plus  - URL 解码 Plus
--      urlep      - URL 编码 Plus
-- urlencode_plus  - URL 编码 Plus
--    str2ascii    - 字符串 -> ASCII
--     str2ord     - 字符串 -> ASCII
--    ascii2str    - ASCII -> 字符串 (逗号分隔)
--     ord2str     - ASCII -> 字符串
--     dec2hex     - Dec -> Hex
--     hex2dec     - Hex -> Dec
--    byte2hex     - Byte -> Hex
--    str2byte     - 字符串 -> Byte
--     str2hex     - 字符串 -> Hex
--    hex2byte     - Hex -> Byte
--     hex2str     - 字符串 -> Hex
--     ip2hex      - IP -> Hex
--     hex2ip      - Hex -> IP
--     dec2ip      - Dec -> IP
--     ip2dec      - IP -> Dec
+- [x]      b16e       - Base14 Encode
+- [x]      b16d       - Base16 Decode
+- [x]      b32e       - Base32 Encode
+- [x]      b32d       - Base32 Decode
+- [x]      b64e       - Base64 Encode
+- [x]      b64d       - Base64 Decode
+- [x]     atbash      - 埃特巴什码解码
+- [x]     caesar      - 凯撒编码
+- [x]      rot13      - rot13
+- [x]      mpkc       - 手机键盘编码 Mobile Phone Keyboard Cipher
+- [x]      morse      - 摩斯电码
+- [x]     peigen      - 培根密码
+- [x]    vigenere     - 维吉利亚密码
+- [x]      urld       - URL 解码
+- [x]    urldecode    - URL 解码
+- [x]      urle       - URL 编码
+- [x]    urlencode    - URL 编码
+- [x]      urldp      - URL 解码 Plus
+- [x] urldecode_plus  - URL 解码 Plus
+- [x]      urlep      - URL 编码 Plus
+- [x] urlencode_plus  - URL 编码 Plus
+- [x]    str2ascii    - 字符串 -> ASCII
+- [x]     str2ord     - 字符串 -> ASCII
+- [x]    ascii2str    - ASCII -> 字符串 (逗号分隔)
+- [x]     ord2str     - ASCII -> 字符串
+- [x]     dec2hex     - Dec -> Hex
+- [x]     hex2dec     - Hex -> Dec
+- [x]    byte2hex     - Byte -> Hex
+- [x]    str2byte     - 字符串 -> Byte
+- [x]     str2hex     - 字符串 -> Hex
+- [x]    hex2byte     - Hex -> Byte
+- [x]     hex2str     - 字符串 -> Hex
+- [x]     ip2hex      - IP -> Hex
+- [x]     hex2ip      - Hex -> IP
+- [x]     dec2ip      - Dec -> IP
+- [x]     ip2dec      - IP -> Dec
 
 ## Install
 
