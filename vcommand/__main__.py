@@ -9,6 +9,9 @@ import os
 
 from . import libs
 
+__NAME__ = "vcommand"
+__VERSION__ = "0.1.0"
+
 funcs = [func for func in libs.__dir__() if func.startswith('func_')]
 
 
@@ -29,7 +32,7 @@ def main():
         print("[!] No help")
         return 1
     elif command in ['v', 'version', 'V']:
-        print("[!] Version : 0.1.0 beta")
+        print("[!] Version : %s" % __VERSION__)
         return 1
     elif command in ['func', 'function', 'F']:
         print("[@] === Functions ===")

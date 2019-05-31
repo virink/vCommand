@@ -4,5 +4,3 @@
     Author : Virink <virink@outlook.com>
     Date   : 2019/03/01, 14:27
 """
-
-name = "vcommand"
