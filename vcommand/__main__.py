@@ -52,6 +52,9 @@ def main():
         sys.exit(1)
     # Functions
     try:
+        if len(args) <= 1:
+            print("[!] Usage: command arg1 [arg2...]")
+            sys.exit(1)
         args = args[argv:]
         res = libs.__dict__['func_%s' % command](*args)
         print(res)

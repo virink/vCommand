@@ -68,7 +68,7 @@ def _fix_missing(baseurl, temppath):
     global q
     os.system("cd ./%s && git fsck > ../cache.dat 2>&1" % temppath)
     missing = []
-    if not os.path.exists("./cache.dat"):
+    if os.path.getsize("./cache.dat") < 5:
         cprint(CRED, "[-] Missing Objects Not Found")
         return False
     with open("./cache.dat", "r") as f:
@@ -128,10 +128,10 @@ def _repalce_bad_chars(path):
 def _complete_url(baseurl):
     if (not baseurl.startswith("http://")) and (not baseurl.startswith("https://")):
         baseurl = "http://" + baseurl
-    if baseurl.endswith(".git/"):
+    if baseurl.endswith("/.git/"):
         return baseurl
     else:
-        return baseurl + ".git/"
+        return baseurl + "/.git/"
 
 
 def func_githack(*args):
@@ -139,11 +139,13 @@ def func_githack(*args):
     baseurl = _complete_url(baseurl)
     temppath = _repalce_bad_chars(_get_prefix(baseurl))[:-1]
     cprint(CYELLOW, "[!] Base Files Fetching... ")
-    for i in BASE_FILES[]:
+    for i in BASE_FILES:
         path = "./%s/%s" % (temppath, i)
         url = baseurl + i[len(".git/"):]
         ret = _download_file(url, path)
-
+        # TODO: 判断如果不存在 .git 则退出
+        # if '.git/config' == i and not ret:
+        #     return False
     cprint(CYELLOW, "[!] Commit Objects Fetching...")
     _commitFile = "./%s/.git/logs/refs/heads/master" % temppath
     if not os.path.exists(_commitFile):
@@ -180,7 +182,7 @@ def func_githack(*args):
             _download_file(url, path)
     cprint(CYELLOW, "[+] Start fixing missing files...")
     if _fix_missing(baseurl, temppath):
-        os.system("cd ./%s && git reset --hard > /dev/null" % temppath)
+        os.system("cd ./%s && git reset --hard > /dev/null 2>&1" % temppath)
         cprint(CGREEN, "[+] All file downloaded!")
         cprint(CGREEN, "[+] Clone Success. Dist File : ./%s" % temppath)
     else:
