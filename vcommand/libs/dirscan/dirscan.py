@@ -101,36 +101,30 @@ class Scanner():
         """识别模式"""
         try:
             rand1 = ''.join(random.sample(string.ascii_letters, 8))
-            rand2 = uuid.uuid4()
+            rand2 = "%s/%s" % (uuid.uuid4(), uuid.uuid4())
             rand3 = random.randint(1000000, 99999999)
-            r1 = requests.get(self.url+str(rand1), allow_redirects=False)
-            r2 = requests.get(self.url+str(rand2)+'/' +
-                              str(rand2), allow_redirects=False)
+            r1 = requests.get(self.url + str(rand1), allow_redirects=False)
+            r2 = requests.get(self.url + str(rand2), allow_redirects=False)
             r3 = requests.get(self.url + str(rand3), allow_redirects=False)
             # TODO 识别 404
             if r1.status_code == r2.status_code == r3.status_code == 200:
                 if len(r1.text) == len(r2.text) == len(r3.text):
                     req = requests.get
-                    # print(r1.text)
-                    # print(r1.url)
-                    # for k in r1.headers:
-                    #     print(k, r1.headers[k])
                     return len(r1.text), req
-                    # return -1, False
                 else:
                     # TODO 根据相似度判断是否自定义 not found
-                    d = difflib.Differ()
-                    _r1 = r1.text.splitlines()
-                    _r2 = r2.text.splitlines()
-                    _r3 = r3.text.splitlines()
-                    d12 = [i for i in list(
-                        d.compare(_r1, _r2)) if i.startswith('  ')]
-                    d13 = [i for i in list(
-                        d.compare(_r1, _r3)) if i.startswith('  ')]
-                    d23 = [i for i in list(
-                        d.compare(d12, d13)) if i.startswith('  ')]
-                    print(d23, len(d23))
                     return -2, False
+                    # d = difflib.Differ()
+                    # _r1 = r1.text.splitlines()
+                    # _r2 = r2.text.splitlines()
+                    # _r3 = r3.text.splitlines()
+                    # _r4 = r4.text.splitlines()
+                    # d12 = [i for i in list(
+                    #     d.compare(_r1, _r2)) if i.startswith('  ')]
+                    # d34 = [i for i in list(
+                    #     d.compare(_r3, _r4)) if i.startswith('  ')]
+                    # print(d23, len(d23))
+                    # return -2, False
             elif r1.status_code == r2.status_code == r3.status_code == 302 or \
                     r1.status_code == r2.status_code == r3.status_code == 301:
                 if r1.headers.get('Location') == r2.headers.get('Location') \
