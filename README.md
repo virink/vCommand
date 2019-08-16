@@ -4,27 +4,6 @@ A command tools for me
 
 ## Functions
 
-- [x]      b16e       - Base14 Encode
-- [x]      b16d       - Base16 Decode
-- [x]      b32e       - Base32 Encode
-- [x]      b32d       - Base32 Decode
-- [x]      b64e       - Base64 Encode
-- [x]      b64d       - Base64 Decode
-- [x]     atbash      - 埃特巴什码解码
-- [x]     caesar      - 凯撒编码
-- [x]      rot13      - rot13
-- [x]      mpkc       - 手机键盘编码 Mobile Phone Keyboard Cipher
-- [x]      morse      - 摩斯电码
-- [x]     peigen      - 培根密码
-- [x]    vigenere     - 维吉利亚密码
-- [x]      urld       - URL 解码
-- [x]    urldecode    - URL 解码
-- [x]      urle       - URL 编码
-- [x]    urlencode    - URL 编码
-- [x]      urldp      - URL 解码 Plus
-- [x] urldecode_plus  - URL 解码 Plus
-- [x]      urlep      - URL 编码 Plus
-- [x] urlencode_plus  - URL 编码 Plus
 - [x]    str2ascii    - 字符串 -> ASCII
 - [x]     str2ord     - 字符串 -> ASCII
 - [x]    ascii2str    - ASCII -> 字符串 (逗号分隔)
@@ -40,14 +19,42 @@ A command tools for me
 - [x]     hex2ip      - Hex -> IP
 - [x]     dec2ip      - Dec -> IP
 - [x]     ip2dec      - IP -> Dec
+- [x]      b64d       - Base64 Decode
+- [x]      b64e       - Base64 Encode
+- [x]      b32d       - Base32 Decode
+- [x]      b32e       - Base32 Encode
+- [x]      b16d       - Base16 Decode
+- [x]      b16e       - Base14 Encode
+- [x]     atbash      - 埃特巴什码解码
+- [x]     caesar      - 凯撒编码
+- [x]      rot13      - rot13
+- [x]      mpkc       - 手机键盘编码 Mobile Phone Keyboard Cipher
+- [x]      morse      - 摩斯电码
+- [x]     peigen      - 培根密码
+- [x]    vigenere     - 维吉利亚密码
+- [x]      urld       - URL 解码
+- [x]    urldecode    - URL 解码
+- [x]      urle       - URL 编码
+- [x]    urlencode    - URL 编码
+- [x]      urldp      - URL 解码 Plus
+- [x] urldecode_plus  - URL 解码 Plus
+- [x]      urlep      - URL 编码 Plus
+- [x] urlencode_plus  - URL 编码 Plus
+- [x]      ctfr       - CFTR 查询子域名 Search By https://crt.sh
+- [x]       png       - PNG 文件格式分析
+- [x]     dirscan     - Scan dirs for CTF
+- [x]     githack     - GitHack Git源码泄露下载
 
 ## Install
 
 ~~pip install vcommand~~
+`pip install vcommand-0.1.0-py3.7.egg`
 
-```bash
-# 用于 zsh-syntax-highlighting
+```shell
+# 用于 zsh & zsh-syntax-highlighting
 echo 'eval $($(which vcommand) _alias)' >> ~/.zshrc
+# bash
+echo 'eval $($(which vcommand) _alias)' >> ~/.bashrc
 ```
 
 **快捷命令???**
