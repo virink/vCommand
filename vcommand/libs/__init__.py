@@ -19,5 +19,4 @@ from .url import *
 from .cftr import *
 from .png import *
 
-from .dirscan import func_dirscan
 from .githack import func_githack

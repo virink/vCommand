@@ -4,6 +4,7 @@ A command tools for me
 
 ## Functions
 
+- [*]     macstr      - MAC地址转换
 - [x]    str2ascii    - 字符串 -> ASCII
 - [x]     str2ord     - 字符串 -> ASCII
 - [x]    ascii2str    - ASCII -> 字符串 (逗号分隔)
@@ -42,13 +43,12 @@ A command tools for me
 - [x] urlencode_plus  - URL 编码 Plus
 - [x]      ctfr       - CFTR 查询子域名 Search By https://crt.sh
 - [x]       png       - PNG 文件格式分析
-- [x]     dirscan     - Scan dirs for CTF
 - [x]     githack     - GitHack Git源码泄露下载
 
 ## Install
 
 ~~pip install vcommand~~
-`pip install vcommand-0.1.0-py3.7.egg`
+`pip install vcommand-0.1.1-py3.7.egg`
 
 ```shell
 # 用于 zsh & zsh-syntax-highlighting

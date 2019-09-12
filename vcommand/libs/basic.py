@@ -12,6 +12,16 @@ import binascii
 import re
 
 
+def func_macstr(*args):
+    """MAC地址转换"""
+    if ':' in args[0]:
+        return str(int(args[0].replace(':', ''), 16))
+    elif args[0].isdigit():
+        return ':'.join(map(''.join, zip(*[iter("%012x" % int(args[0]))]*2)))
+    else:
+        return 'Error'
+
+
 def func_str2ascii(*args):
     """字符串 -> ASCII"""
     return ','.join([str(ord(i)) for i in args[0]])

@@ -15,7 +15,7 @@ def func_urld(*args):
 
 def func_urldecode(*args):
     """URL 解码"""
-    return urllib.parse.unquote(args[0].encode('utf-8'))
+    return urllib.parse.unquote(args[0])
 
 
 def func_urle(*args):
@@ -25,7 +25,7 @@ def func_urle(*args):
 
 def func_urlencode(*args):
     """URL 编码"""
-    return urllib.parse.quote(args[0].encode('utf-8'))
+    return urllib.parse.quote(args[0])
 
 
 def func_urldp(*args):
@@ -35,7 +35,7 @@ def func_urldp(*args):
 
 def func_urldecode_plus(*args):
     """URL 解码 Plus"""
-    return urllib.parse.unquote_plus(args[0].encode('utf-8'))
+    return urllib.parse.unquote_plus(args[0])
 
 
 def func_urlep(*args):
@@ -45,4 +45,4 @@ def func_urlep(*args):
 
 def func_urlencode_plus(*args):
     """URL 编码 Plus"""
-    return urllib.parse.quote_plus(args[0].encode('utf-8'))
+    return urllib.parse.quote_plus(args[0])

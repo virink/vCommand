@@ -1,6 +1,9 @@
 default:
 	python setup.py sdist
 
+egg:
+	python setup.py bdist_egg
+
 install:
 	python setup.py install
 
