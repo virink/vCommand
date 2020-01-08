@@ -8,7 +8,7 @@
 from setuptools import find_packages, setup
 
 __NAME__ = "vcommand"
-__VERSION__ = "0.1.0"
+__VERSION__ = "0.1.2"
 __AUTHOR__ = "Virink"
 __EMAIL__ = "virink@outlook.com"
 
@@ -18,12 +18,18 @@ with open("README.md", "r") as fh:
 setup(
     name=__NAME__,
     version=__VERSION__,
+
     author=__AUTHOR__,
     author_email=__EMAIL__,
+
     description="A command plugin for terminal",
     long_description=long_description,
     long_description_content_type="text/markdown",
+
+    license="MIT Licence",
+
     url="https://github.com/virink/vCommand.git",
+
     packages=find_packages(),
     entry_points={
         'console_scripts': [

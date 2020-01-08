@@ -1,14 +1,14 @@
 default:
-	python setup.py sdist
+	python3 setup.py sdist
 
 egg:
-	python setup.py bdist_egg
+	python3 setup.py bdist_egg
 
 install:
-	python setup.py install
+	python3 setup.py install
 
 uninstall:
-	pip uninstall vcommand
+	pip3 uninstall vcommand
 
 clean:
 	find `pwd` -name ".DS_Store" -delete
